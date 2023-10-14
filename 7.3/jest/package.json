@@ -4,8 +4,8 @@
   "description": "jest test",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
-  },
+    "test": "jest --collectCoverage --config"
+     },
   "keywords": [
     "jest",
     "test",
@@ -14,6 +14,6 @@
   "author": "omelnikova",
   "license": "ISC",
   "devDependencies": {
-    "jest": "^27.3.1"
+    "jest": "^27.5.1"
   }
 }
