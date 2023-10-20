@@ -10,7 +10,9 @@ import {
 test.describe("Authorization", () => {
   test.beforeEach(async ({ page }) => {
     await page.goto("https://netology.ru/");
-    await expect(page).toHaveTitle("Нетология — обучение современным профессиям онлайн");
+    await expect(page).toHaveTitle(
+      "Нетология — обучение современным профессиям онлайн"
+    );
     await page.screenshot({ path: "screenshot/screenshotOne.png" });
     await page.getByRole("link", { name: "Войти" }).click();
     await page.screenshot({ path: "screenshot/screenshotTwo.png" });
@@ -26,7 +28,8 @@ test.describe("Authorization", () => {
     await page.getByPlaceholder("Пароль").click();
     await page.getByTestId("login-submit-btn").click();
     await page.screenshot({ path: "screenshot/screenshotFive.png" });
-    await expect(page).toHaveURL("https://netology.ru/profile"); 
+    // await page.getByRole('heading', { name: 'Моё обучение' }).toBeVisible();
+    await expect(page).toHaveURL("https://netology.ru/profile");
   });
 
   test("Unsuccessful authorization", async ({ page }) => {
